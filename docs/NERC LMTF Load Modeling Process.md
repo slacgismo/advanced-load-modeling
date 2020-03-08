@@ -1,7 +1,3 @@
-Initial Draft: 2/26/2020
-
-Tony Faris, BPA
-
 # Objectives
 
 A composite load model is used by planners across North America to run
@@ -585,11 +581,9 @@ Planning studies are primarily concerned with load composition at peak
 or light load times. For the initial data set, the periods of interest
 are defined as:
 
--   Summer at 4:00 pm
-
--   Winter at 8:00 am
-
--   Spring at 3:00 am
+* Summer at 4:00 pm
+* Winter at 8:00 am
+* Spring at 3:00 am
 
 Results for a particular time slice can be visualized with pie charts.
 Samples of these pie charts are provided below. **Note: Pie charts are
@@ -636,3 +630,8 @@ available for all city/feeder pairs, and can be added if necessary.**
 [image:image39.png]
 
 [image:image40.png]
+
+# Revision History
+
+* Initial Draft: 2/26/2020 (Tony Faris, BPA)
+
