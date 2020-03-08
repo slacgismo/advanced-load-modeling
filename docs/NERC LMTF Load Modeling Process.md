@@ -394,21 +394,21 @@ though these values are user-definable per city/feeder pair.
 
 Table 2: Default Feeder Composition
 
-  Building Type            RES Square Ft.   COM Square Ft.   MIX Square Ft.   RAG Square Ft.
-  ------------------------ ---------------- ---------------- ---------------- ----------------
-  Residential Home         6000000          0                3000000          600000
-  College                  0                0                0                0
-  Grocery                  90000            90000            135000           45000
-  Health                   40000            40000            60000            0
-  Large Office             0                4200000          0                0
-  Lodging                  0                1000000          300000           50000
-  Miscellaneous            10000            10000            20000            0
-  Refrigerated Warehouse   0                0                100000           0
-  Restaurant               100000           125000           200000           25000
-  Retail                   600000           600000           800000           60000
-  School                   400000           0                400000           100000
-  Small Office             0                100000           600000           0
-  Warehouse                150000           0                400000           500000
+| Building Type            | RES Square Ft.   | COM Square Ft.   | MIX Square Ft.   | RAG Square Ft.   |
+| ------------------------ | ---------------- | ---------------- | ---------------- | ---------------- |
+| Residential Home         | 6000000          | 0                | 3000000          | 600000           |
+| College                  | 0                | 0                | 0                | 0                |
+| Grocery                  | 90000            | 90000            | 135000           | 45000            |
+| Health                   | 40000            | 40000            | 60000            | 0                |
+| Large Office             | 0                | 4200000          | 0                | 0                |
+| Lodging                  | 0                | 1000000          | 300000           | 50000            |
+| Miscellaneous            | 10000            | 10000            | 20000            | 0                |
+| Refrigerated Warehouse   | 0                | 0                | 100000           | 0                |
+| Restaurant               | 100000           | 125000           | 200000           | 25000            |
+| Retail                   | 600000           | 600000           | 800000           | 60000            |
+| School                   | 400000           | 0                | 400000           | 100000           |
+| Small Office             | 0                | 100000           | 600000           | 0                |
+| Warehouse                | 150000           | 0                | 400000           | 500000           |
 
 ## Electrification
 
