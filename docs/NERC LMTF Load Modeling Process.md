@@ -99,7 +99,7 @@ determine these days of interest, using the following process:
     indicating the 90^th^ percentile high for this city. Five summer
     dates were recorded when the high Heat Index reached this value.
 
-[image:image2.emf]
+[image:image2.png]
 
 Figure 2: Sample Summer Heat Index Histogram
 
@@ -108,7 +108,7 @@ Figure 2: Sample Summer Heat Index Histogram
     low Heat Index reached this value. Figure 3 shows a sample histogram
     for this case.
 
-[image:image3.emf]
+[image:image3.png]
 
 Figure 2: Sample Winter Heat Index Histogram
 
@@ -139,7 +139,7 @@ This adjusted HI value is used for all steps forward.
     described in steps 5 (for summer) and 6 (for winter). An example is
     shown in Figure 4:
 
-[image:image4.emf]
+[image:image4.png]
 
 Figure 4: Sample 24-Hour Heat Index Profiles
 
@@ -244,11 +244,11 @@ collected, and the following process was completed:
     for these two days, and Figure 6 shows the corresponding measured
     load.
 
-[image:image5.emf]
+[image:image5.png]
 
 Figure 5: Heat Index for Mild and Warm Summer Days
 
-[image:image6.emf]
+[image:image6.png]
 
 Figure 6: Substation Load for Mild and Warm Summer Days
 
@@ -261,7 +261,7 @@ Figure 6: Substation Load for Mild and Warm Summer Days
     the load on the mild day. This provides an estimate of the hourly kW
     of air conditioning, shown in Figure 7.
 
-[media/image7.emf]
+[media/image7.png]
 
 Figure 7: Estimated Residential Cooling for Substation
 
@@ -270,7 +270,7 @@ Figure 7: Estimated Residential Cooling for Substation
     24-hour period under study. The slope across the full 24 hours is
     shown in Figure 8.
 
-[image:image8.emf]
+[image:image8.png]
 
 Figure 8: Slope of Residential Cooling, Relative to kW/SqFt
 
@@ -331,11 +331,11 @@ The methodology for developing the model is as follows:
     relatively constant across all days, but as expected, lighting load
     is nearly double in the afternoon relative to the early morning.
 
-[image:image10.emf]
+[image:image10.png]
 
 Figure 10: Grocery Store Lighting Load at 4:00 am
 
-[image:image11.emf]
+[image:image11.png]
 
 Figure 11: Grocery Store Lighting Load at 4:00 pm
 
@@ -351,11 +351,11 @@ Figure 11: Grocery Store Lighting Load at 4:00 pm
     sensitivity to Heat Index (larger slope of the regression fit) for
     the afternoon when compared to the early morning.
 
-[image:image12.emf]
+[image:image12.png]
 
 Figure 12: Grocery Store Cooling Load at 4:00 am
 
-[image:image13.emf]
+[image:image13.png]
 
 Figure 12: Grocery Store Cooling Load at 4:00 pm
 
@@ -478,7 +478,7 @@ The process for calculating load shapes is as follows:
 2.  Retrieve the 24 hour Heat Index profile for the given city for
     summer. A sample plot is given in Figure 15.
 
-[image:image15.emf]
+[image:image15.png]
 
 Figure 15: Heat Index Profile for Portland, Summer
 
@@ -503,7 +503,7 @@ Figure 15: Heat Index Profile for Portland, Summer
     reaches a peak at a time corresponding to the peak Heat Index for
     the day.
 
-[image:image16.emf]
+[image:image16.png]
 
 Figure 15: Sample End Use Load Shapes
 
@@ -518,15 +518,15 @@ plotted, as required. Figures 17, 18, and 19 show total load shapes for
 Portland RES, COM, and MIX feeders, respectively, under all three
 seasonal conditions.
 
-[image:image17.emf]
+[image:image17.png]
 
 Figure 17: Total Load Shapes, Portland RES Feeder
 
-[image:image18.emf]
+[image:image18.png]
 
 Figure 18: Total Load Shapes, Portland COM Feeder
 
-[image:image19.emf]
+[image:image19.png]
 
 Figure 19: Total Load Shapes, Portland MIX Feeder
 
@@ -551,15 +551,15 @@ load composition factors:
     20, 21, and 22 show the 24 load composition for Portland RES, COM,
     and MIX feeders, respectively.
 
-[image:image20.emf]
+[image:image20.png]
 
 Figure 20: Load Composition for Portland RES Feeder
 
-[image:image21.emf]
+[image:image21.png]
 
 Figure 21: Load Composition for Portland COM Feeder
 
-[image:image22.emf]
+[image:image22.png]
 
 Figure 22: Load Composition for Portland MIX Feeder
 
