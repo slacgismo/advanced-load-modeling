@@ -43,7 +43,7 @@ generated for each of the three seasons under study. Finally, these load
 shapes are translated into load composition percentages using "Rules of
 Association" mapping information.
 
-[image:media/image1.png]
+[image:image1.png]
 
 Figure 1: Load Modeling Methodology
 
@@ -99,7 +99,7 @@ determine these days of interest, using the following process:
     indicating the 90^th^ percentile high for this city. Five summer
     dates were recorded when the high Heat Index reached this value.
 
-[image:media/image2.emf]
+[image:image2.emf]
 
 Figure 2: Sample Summer Heat Index Histogram
 
@@ -108,7 +108,7 @@ Figure 2: Sample Summer Heat Index Histogram
     low Heat Index reached this value. Figure 3 shows a sample histogram
     for this case.
 
-[image:media/image3.emf]
+[image:image3.emf]
 
 Figure 2: Sample Winter Heat Index Histogram
 
@@ -124,7 +124,7 @@ Figure 2: Sample Winter Heat Index Histogram
     the HI recorded during the previous two hours by the following
     equation:
 
-$HI_{adj} = (0.6 \* HI_t) + (0.3 \* HI_t-1) + (0.1 \* HI_t-2)$
+$$HI_{adj} = (0.6 \* HI_t) + (0.3 \* HI_t-1) + (0.1 \* HI_t-2)$$
 
 This adjusted HI value is used for all steps forward.
 
@@ -139,7 +139,7 @@ This adjusted HI value is used for all steps forward.
     described in steps 5 (for summer) and 6 (for winter). An example is
     shown in Figure 4:
 
-[image:media/image4.emf]
+[image:image4.emf]
 
 Figure 4: Sample 24-Hour Heat Index Profiles
 
@@ -168,29 +168,29 @@ dependencies.
 
 Table 1: Residential and Commercial End Uses and Categories
 
-  End Use             Residential   Commercial   Weather-Dependent   Time-Dependent
-  ------------------- ------------- ------------ ------------------- ----------------
-  Resistive Heating   X             X            X                   X
-  Heat Pump           X             X            X                   X
-  Cooling             X             X            X                   X
-  Air Compressor                    X                                X
-  Computer            X                                              X
-  Cooking                           X                                X
-  Dryer               X                                              X
-  Entertainment       X                                              X
-  Freezer             X                                              X
-  Lighting            X             X                                X
-  "Miscellaneous"                   X                                X
-  Motor                             X                                X
-  Office Equipment                  X                                X
-  "Other"             X                                              X
-  Oven                X                                              X
-  Plugs               X                                              X
-  Process                           X                                X
-  Refrigeration       X             X                                X
-  Ventilation                       X                                X
-  Washer              X                                              X
-  Water Heating       X             X                                X
+| End Use             | Residential   | Commercial   | Weather-Dependent   | Time-Dependent   |
+| ------------------- | ------------- | ------------ | ------------------- | ---------------- |
+| Resistive Heating   | X             | X            | X                   | X                |
+| Heat Pump           | X             | X            | X                   | X                |
+| Cooling             | X             | X            | X                   | X                |
+| Air Compressor      |               | X            |                     | X                |
+| Computer            | X             |              |                     | X                |
+| Cooking             |               | X            |                     | X                |
+| Dryer               | X             |              |                     | X                |
+| Entertainment       | X             |              |                     | X                |
+| Freezer             | X             |              |                     | X                |
+| Lighting            | X             | X            |                     | X                |
+| "Miscellaneous"     |               | X            |                     | X                |
+| Motor               |               | X            |                     | X                |
+| Office Equipment    |               | X            |                     | X                |
+| "Other"             | X             |              |                     | X                |
+| Oven                | X             |              |                     | X                |
+| Plugs               | X             |              |                     | X                |
+| Process             |               | X            |                     | X                |
+| Refrigeration       | X             | X            |                     | X                |
+| Ventilation         |               | X            |                     | X                |
+| Washer              | X             |              |                     | X                |
+| Water Heating       | X             | X            |                     | X                |
 
 Weather-dependent end uses (heating and cooling) are assigned an hourly
 slope and intercept dependent on the Heat Index for that given hour. All
@@ -198,14 +198,14 @@ model parameters are defined on a kW-per-square foot basis. For example,
 residential resistive heating, heat pump, and AC load (in kW/sqFt) for
 hour 0 and hour 1 are defined as:
 
-$RH(t=0) = Slope~RH~(t=0) x HI + Int~RH~(t=0) RH(t=1) = Slope~RH~(t=1) x
-HI + Int~RH~(t=1)$
+$$RH(t=0) = Slope~RH~(t=0) x HI + Int~RH~(t=0) RH(t=1) = Slope~RH~(t=1) x
+HI + Int~RH~(t=1)$$
 
-$HP(t=0) = Slope~HP~(t=0) X HI + Int~HP~(t=0) HP(t=1) = Slope~HP~(t=1) X
-HI + Int~HP~(t=1)$
+$$HP(t=0) = Slope~HP~(t=0) X HI + Int~HP~(t=0) HP(t=1) = Slope~HP~(t=1) X
+HI + Int~HP~(t=1)$$
 
-$AC(t=0) = Slope~AC~(t=0) X HI + Int~AC~(t=0) AC(t=1) = Slope~AC~(t=1) X
-HI + Int~AC~(t=1)$
+$$AC(t=0) = Slope~AC~(t=0) X HI + Int~AC~(t=0) AC(t=1) = Slope~AC~(t=1) X
+HI + Int~AC~(t=1)$$
 
 Similarly, weather-independent end uses (e.g. lighting, cooking, etc.)
 are assigned an hourly kW per square foot, which varies by hour of day.
@@ -244,11 +244,11 @@ collected, and the following process was completed:
     for these two days, and Figure 6 shows the corresponding measured
     load.
 
-[image:media/image5.emf]
+[image:image5.emf]
 
 Figure 5: Heat Index for Mild and Warm Summer Days
 
-[image:media/image6.emf]
+[image:image6.emf]
 
 Figure 6: Substation Load for Mild and Warm Summer Days
 
@@ -270,7 +270,7 @@ Figure 7: Estimated Residential Cooling for Substation
     24-hour period under study. The slope across the full 24 hours is
     shown in Figure 8.
 
-[image:media/image8.emf]
+[image:image8.emf]
 
 Figure 8: Slope of Residential Cooling, Relative to kW/SqFt
 
@@ -294,7 +294,7 @@ Similar to the RBSA, the CEUS provides an 8760 hourly end-use dataset
 based on metering and simulations for fifteen climate zones across
 California. Figure 9 shows a map of these climate zones.
 
-[image:media/image9.png]
+[image:image9.png]
 
 Figure : California Climate Zones Used in CEUS
 
@@ -331,11 +331,11 @@ The methodology for developing the model is as follows:
     relatively constant across all days, but as expected, lighting load
     is nearly double in the afternoon relative to the early morning.
 
-[image:media/image10.emf]
+[image:image10.emf]
 
 Figure 10: Grocery Store Lighting Load at 4:00 am
 
-[image:media/image11.emf]
+[image:image11.emf]
 
 Figure 11: Grocery Store Lighting Load at 4:00 pm
 
@@ -351,11 +351,11 @@ Figure 11: Grocery Store Lighting Load at 4:00 pm
     sensitivity to Heat Index (larger slope of the regression fit) for
     the afternoon when compared to the early morning.
 
-[image:media/image12.emf]
+[image:image12.emf]
 
 Figure 12: Grocery Store Cooling Load at 4:00 am
 
-[image:media/image13.emf]
+[image:image13.emf]
 
 Figure 12: Grocery Store Cooling Load at 4:00 pm
 
@@ -426,7 +426,7 @@ heating, cooling, water heating, and cooking. From this information,
 electrification percentages are estimated for each of these four end
 uses on a per-region basis.
 
-[image:media/image14.png]
+[image:image14.png]
 
 Figure 14: U.S. Census Regions Used for RECS and CBECS
 
@@ -437,31 +437,31 @@ accurate information is acquired for a given city.
 
 Table 3: Default Residential Electrification Percentages
 
-  Region               Heat Pump   Other Electric Heat   Cooling   Water Heating   Cooking
-  -------------------- ----------- --------------------- --------- --------------- ---------
-  New England          3%          10%                   75%       36%             59%
-  Middle Atlantic      3%          11%                   88%       31%             43%
-  East North Central   3%          17%                   92%       34%             57%
-  West North Central   4%          18%                   92%       40%             75%
-  South Atlantic       24%         32%                   95%       72%             78%
-  East South Central   24%         39%                   93%       76%             75%
-  West South Central   8%          45%                   95%       58%             71%
-  Mountain             8%          19%                   78%       31%             67%
-  Pacific              7%          25%                   66%       32%             53%
+| Region               | Heat Pump   | Other Electric Heat   | Cooling   | Water Heating   | Cooking   |
+| -------------------- | ----------- | --------------------- | --------- | --------------- | --------- |
+| New England          | 3%          | 10%                   | 75%       | 36%             | 59%       |
+| Middle Atlantic      | 3%          | 11%                   | 88%       | 31%             | 43%       |
+| East North Central   | 3%          | 17%                   | 92%       | 34%             | 57%       |
+| West North Central   | 4%          | 18%                   | 92%       | 40%             | 75%       |
+| South Atlantic       | 24%         | 32%                   | 95%       | 72%             | 78%       |
+| East South Central   | 24%         | 39%                   | 93%       | 76%             | 75%       |
+| West South Central   | 8%          | 45%                   | 95%       | 58%             | 71%       |
+| Mountain             | 8%          | 19%                   | 78%       | 31%             | 67%       |
+| Pacific              | 7%          | 25%                   | 66%       | 32%             | 53%       |
 
 Table : Default Commercial Electrification Percentages
 
-  Region               Heat Pump   Other Electric Heat   Cooling   Water Heating   Cooking
-  -------------------- ----------- --------------------- --------- --------------- ---------
-  New England          9%          2%                    77%       45%             27%
-  Middle Atlantic      9%          6%                    89%       41%             31%
-  East North Central   5%          8%                    90%       39%             33%
-  West North Central   7%          14%                   87%       49%             32%
-  South Atlantic       27%         20%                   91%       62%             30%
-  East South Central   17%         23%                   88%       59%             31%
-  West South Central   10%         30%                   81%       47%             25%
-  Mountain             10%         13%                   84%       40%             31%
-  Pacific              15%         21%                   88%       51%             22%
+| Region               | Heat Pump   | Other Electric Heat   | Cooling   | Water Heating   | Cooking   |
+| -------------------- | ----------- | --------------------- | --------- | --------------- | --------- |
+| New England          | 9%          | 2%                    | 77%       | 45%             | 27%       |
+| Middle Atlantic      | 9%          | 6%                    | 89%       | 41%             | 31%       |
+| East North Central   | 5%          | 8%                    | 90%       | 39%             | 33%       |
+| West North Central   | 7%          | 14%                   | 87%       | 49%             | 32%       |
+| South Atlantic       | 27%         | 20%                   | 91%       | 62%             | 30%       |
+| East South Central   | 17%         | 23%                   | 88%       | 59%             | 31%       |
+| West South Central   | 10%         | 30%                   | 81%       | 47%             | 25%       |
+| Mountain             | 10%         | 13%                   | 84%       | 40%             | 31%       |
+| Pacific              | 15%         | 21%                   | 88%       | 51%             | 22%       |
 
 ## Software data flow
 
@@ -478,7 +478,7 @@ The process for calculating load shapes is as follows:
 2.  Retrieve the 24 hour Heat Index profile for the given city for
     summer. A sample plot is given in Figure 15.
 
-[image:media/image15.emf]
+[image:image15.emf]
 
 Figure 15: Heat Index Profile for Portland, Summer
 
@@ -503,7 +503,7 @@ Figure 15: Heat Index Profile for Portland, Summer
     reaches a peak at a time corresponding to the peak Heat Index for
     the day.
 
-[image:media/image16.emf]
+[image:image16.emf]
 
 Figure 15: Sample End Use Load Shapes
 
@@ -518,15 +518,15 @@ plotted, as required. Figures 17, 18, and 19 show total load shapes for
 Portland RES, COM, and MIX feeders, respectively, under all three
 seasonal conditions.
 
-[image:media/image17.emf]
+[image:image17.emf]
 
 Figure 17: Total Load Shapes, Portland RES Feeder
 
-[image:media/image18.emf]
+[image:image18.emf]
 
 Figure 18: Total Load Shapes, Portland COM Feeder
 
-[image:media/image19.emf]
+[image:image19.emf]
 
 Figure 19: Total Load Shapes, Portland MIX Feeder
 
@@ -551,15 +551,15 @@ load composition factors:
     20, 21, and 22 show the 24 load composition for Portland RES, COM,
     and MIX feeders, respectively.
 
-[image:media/image20.emf]
+[image:image20.emf]
 
 Figure 20: Load Composition for Portland RES Feeder
 
-[image:media/image21.emf]
+[image:image21.emf]
 
 Figure 21: Load Composition for Portland COM Feeder
 
-[image:media/image22.emf]
+[image:image22.emf]
 
 Figure 22: Load Composition for Portland MIX Feeder
 
@@ -597,42 +597,42 @@ available for all city/feeder pairs, and can be added if necessary.**
 
 ### Boston
 
-[image:media/image23.png]
+[image:image23.png]
 
-[image:media/image24.png]
+[image:image24.png]
 
-[image:media/image25.png]
+[image:image25.png]
 
-[image:media/image26.png]
+[image:image26.png]
 
-[image:media/image27.png]
+[image:image27.png]
 
-[image:media/image28.png]
+[image:image28.png]
 
 ### Miami
 
-[image:media/image29.png]
+[image:image29.png]
 
-[image:media/image30.png]
+[image:image30.png]
 
-[image:media/image31.png]
+[image:image31.png]
 
-[image:media/image32.png]
+[image:image32.png]
 
-[image:media/image33.png]
+[image:image33.png]
 
-[image:media/image34.png]
+[image:image34.png]
 
 ### Phoenix
 
-[image:media/image35.png]
+[image:image35.png]
 
-[image:media/image36.png]
+[image:image36.png]
 
-[image:media/image37.png]
+[image:image37.png]
 
-[image:media/image38.png]
+[image:image38.png]
 
-[image:media/image39.png]
+[image:image39.png]
 
-[image:media/image40.png]
+[image:image40.png]
