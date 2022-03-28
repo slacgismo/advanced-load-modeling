@@ -752,19 +752,12 @@ def dynamic_model(dataframe, months_div='auto', days_div='auto', hours_div='auto
                                                                                               holdout_data, mode,
                                                                                               model_order)
     plot_model(dataframe, e_comb, Q_comb, holdout_data, mode)
-
-    print('MODEL PARAMETERS')
-    print('Months divisor:',months_div)
-    print('Days divisor:',days_div)
-    print('Hours divisor:',hours_div)
-    print('Model order:',model_order)
-    print('Hold out data:',holdout_data*100,'%')
     
     num = np.array(x_comb[model_order:(2*model_order+1)]).flatten()
     den = np.array(x_comb[0:model_order]).flatten()
     tf_P_to_T = ct.tf(num,den,dt=1)
     
-    return tf_P_to_T
+    return months_div, days_div, hours_div, model_order, holdout_data, tf_P_to_T
 
 
 # Forecaster function
