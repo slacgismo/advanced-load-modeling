@@ -749,12 +749,12 @@ def dynamic_model(dataframe, months_div='auto', days_div='auto', hours_div='auto
                                                                                               model_order)
     plot_model(dataframe, e_comb, Q_comb, holdout_data, mode)
     
-    display('MODEL PARAMETERS')
-    display('Months divisor:', months_div)
-    display('Days divisor:',days_div)
-    display('Hours divisor:',hours_div)
-    display('Model order:',model_order)
-    display('Hold out data fraction:',holdout_data)
+    print('MODEL PARAMETERS')
+    print('Months divisor:', months_div)
+    print('Days divisor:',days_div)
+    print('Hours divisor:',hours_div)
+    print('Model order:',model_order)
+    print('Hold out data fraction:',holdout_data)
     
     num = np.array(x_comb[model_order:(2*model_order+1)]).flatten()
     den = np.array(x_comb[0:model_order]).flatten()
