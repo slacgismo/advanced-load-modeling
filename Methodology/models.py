@@ -8,7 +8,6 @@ from dateutil import *
 import scipy.stats as st
 import control as ct
 
-
     
 # Load data functions
 
@@ -122,14 +121,13 @@ def get_baseload(data,
          
     Returns
     
-        slope_base (float)       Slope loof base region 
+        slope_base (float)         slope loof base region 
         
-        Tbase (float)           Base temperature in degF 
+        Tbase (float)              base temperature in degF 
         
-        base (DataFrame)        Base region dataframe (within +- 5degF from Tbase)
+        base (DataFrame)           base region dataframe (within +- 5degF from Tbase)
         
-        intercept (float)       Intercept value for base region static power equation
-        
+        intercept (float)          intercept value for base region static power equation      
      
     """   
 
@@ -204,7 +202,6 @@ def get_slopes(heating,cooling):
         cool_slope = None
 
     return heat_slope, cool_slope, h0, c0
-
 
 
 # Dynamic and Hyprid model support functions
@@ -375,9 +372,9 @@ def M_model(dataframe, holdout_data, mode, model_order):
         
         holdout_data (decimal)   fraction of data held for testing
         
-        mode (string)            Model mode ('hyprid' or 'dynamic')
+        mode (string)            model mode ('hyprid' or 'dynamic')
         
-        model_order (int)        Model order
+        model_order (int)        model order
          
     Returns
     
@@ -436,13 +433,13 @@ def feature_model(dataframe, months_div, days_div, hours_div, holdout_data, mode
         
     Returns
     
-        e_comb ()
+        e_comb (matrix)                 returns model percent error for hold out data
         
-        Q_comb ()                       Fitted model
+        Q_comb (matrix)                 returns fitted model power data
     
         error (float)                   returns the minimized mean of model error on hold out data
         
-        x_comb (matrix)                 returns discrete LTI model matrix for input variables with specified model order
+        x_comb (matrix)                 returns fitted model coefficients 
                        
     """    
     feeder_ind = feature_selection(dataframe, months_div, days_div, hours_div)
@@ -484,22 +481,21 @@ def best_M_order(dataframe, months_div, days_div, hours_div, holdout_data, mode,
         
         holdout_data (decimal)          fraction of data held for testing
         
-        mode (string)                   Model mode ('hyprid' or 'dynamic')
+        mode (string)                   model mode ('hyprid' or 'dynamic')
         
-        model_order (int or 'auto')     Model order
+        model_order (int or 'auto')     model order
         
     Returns
     
-        e_comb ()
+        e_comb (matrix)                 returns model percent error for hold out data
         
-        Q_comb ()                       Fitted model
+        Q_comb (matrix)                 returns fitted model power data
     
         error (float)                   returns the minimized mean of model error on hold out data
         
-        x_comb (matrix)                 returns discrete LTI model matrix for input variables with specified model order
+        x_comb (matrix)                 returns fitted model coefficients 
         
         model_order (int)               returns model order that minimizes the RMSE (error) if set to 'auto'
-
         
     """
     
@@ -543,19 +539,19 @@ def best_feature(dataframe, months_div, days_div, hours_div, holdout_data, mode,
         
         holdout_data (decimal)                 fraction of data held for testing
         
-        mode (string)                          Model mode ('hyprid' or 'dynamic')
+        mode (string)                          model mode ('hyprid' or 'dynamic')
         
-        model_order (int)                      Model order
+        model_order (int)                      model order
         
         M (matrix)                             discrete LTI model matrix for input variables with specified model order        
         
     Returns
     
-        e_comb ()
+        e_comb (matrix)                      returns model percent error for hold out data
         
-        Q_comb ()                            fitted model
+        Q_comb (matrix)                      returns fitted model power data
             
-        x_comb (matrix)                      returns discrete LTI model matrix for input variables with specified model order
+        x_comb (matrix)                      returns fitted model coefficients 
         
         months_div (int)                     months divisor in a year that minimizes RMSE (error) if set to 'auto'
         
@@ -636,9 +632,9 @@ def plot_model(dataframe, e_comb, Q_comb, holdout_data, mode):
     
         dataframe (DataFrame)           data set for feeder power, temperature, and optional solar with datetime index
         
-        e_comb ()
+        e_comb (matrix)                 model percent error for hold out data
         
-        Q_comb ()                       Fitted model
+        Q_comb (matrix)                 fitted model power data
         
         holdout_data (decimal)          fraction of data held for testing
         
@@ -721,31 +717,31 @@ def dynamic_model(dataframe, months_div='auto', days_div='auto', hours_div='auto
         
         hours_div (2,3,4,6,8,12,24 or 'auto')  hours divisor in a day
         
-        holdout_data (decimal)                 fraction of data held for testing
+        holdout_data (decimal)                 fraction of data held for testing (default 0.0275)
         
         mode (string)                          Model mode ('hyprid' or 'dynamic')
         
-        model_order (int)                      Model order
+        model_order (int or 'auto')            model order, if 'auto' it finds the model order that minimizes RMSE (error)
                 
     Returns
     
-        Figure 1                      error plot 
+        Figure 1                               error plot 
         
-        Figure 2                      power for model vs. actual data
-       
-        Figure 3-1                    temperature vs. model and actual power data
+        Figure 2                               power for model vs. actual data
         
-        Figure 3-2                    solar vs. model and actual power data if solar was given
+        Figure 3-1                             temperature vs. model and actual power data
         
-        months_div                    model parameter: months divisor feature used 
+        Figure 3-2                             solar vs. model and actual power data if solar was given
         
-        days_div                      model parameter: days divisor feature used 
+        months_div                             model parameter: months divisor feature used 
         
-        hours_div                     model parameter: hours divisor feature used 
+        days_div                               model parameter: days divisor feature used 
         
-        holdout_data                  model parameter: fraction of data used as hold out 
+        hours_div                              model parameter: hours divisor feature used 
         
-        tf_P_to_T                     transfer function for power to temperature
+        holdout_data                           model parameter: fraction of data used as hold out 
+        
+        tf_P_to_T                              transfer function for power to temperature
                    
     """
     e_comb, Q_comb, x_comb, months_div, days_div, hours_div, model_order = best_feature(dataframe,months_div, days_div, hours_div, 
@@ -753,11 +749,18 @@ def dynamic_model(dataframe, months_div='auto', days_div='auto', hours_div='auto
                                                                                               model_order)
     plot_model(dataframe, e_comb, Q_comb, holdout_data, mode)
     
+    display('MODEL PARAMETERS')
+    display('Months divisor:', months_div)
+    display('Days divisor:',days_div)
+    display('Hours divisor:',hours_div)
+    display('Model order:',model_order)
+    display('Hold out data fraction:',holdout_data)
+    
     num = np.array(x_comb[model_order:(2*model_order+1)]).flatten()
     den = np.array(x_comb[0:model_order]).flatten()
     tf_P_to_T = ct.tf(num,den,dt=1)
     
-    return months_div, days_div, hours_div, model_order, holdout_data, tf_P_to_T
+    return tf_P_to_T
 
 
 # Forecaster function
