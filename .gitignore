@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+data/SFO-raw.csv
+data/PDX-raw.csv
